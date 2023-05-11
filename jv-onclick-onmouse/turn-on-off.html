@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>-->
+<!--    <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">-->
+<!--    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>-->
+  <h1>Light</h1>
+  <button onclick="turnOn()">Turn on the light</button>
+  <img id="turn" src="https://www.w3schools.com/js/pic_bulboff.gif">
+  <button onclick="TurnOff()">Turn off the light</button>
+
+</body>
+<script>
+    function turnOn(){
+    document.getElementById("turn").src = "https://www.w3schools.com/js/pic_bulbon.gif";
+    }
+    function TurnOff() {
+        document.getElementById("turn").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+    }
+</script>
+</html>

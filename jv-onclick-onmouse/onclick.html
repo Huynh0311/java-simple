@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="OnClick"> This is a text</p>
+</body>
+<script>
+  let demo = document.getElementById("OnClick");
+  demo.addEventListener("click", clickfunction);
+  function clickfunction(){
+    document.getElementById("OnClick").style.color = "red";
+    alert("ok men");
+  }
+</script>
+</html>
