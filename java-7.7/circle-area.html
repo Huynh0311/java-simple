@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích và chu vi hình tròn</h1>
+<p>Nhập Bán Kính</p>
+<input  type="number" value="width" id="width" placeholder="Nhập chiều rộng">
+<br>
+<br><button type="button" value="button" onclick="circle()"> Tính diện tích  </button>
+<br>
+<br><button type="button" value="button" onclick="diameter()"> Tính chu vi  </button>
+<br>
+</body>
+<script>
+
+
+  function circle(){
+    // let score_physics = +document.getElementById('physics').value;
+
+    let R = document.getElementById('width').valueAsNumber;
+
+    let circle = R * R * 3.14;
+    let str = document.documentElement.innerHTML;
+    document.write('<br>');
+
+    document.documentElement.innerHTML = str + "Diện tích hình tròn là: " + circle;
+    // document.write(score_physics);
+  }
+  document.write('<br/>');
+  function diameter(){
+      // let score_physics = +document.getElementById('physics').value;
+
+      let R = document.getElementById('width').valueAsNumber;
+
+      let diameter = R * 2 * 3.14;
+      let str = document.documentElement.innerHTML;
+      document.write('<br>');
+
+      document.documentElement.innerHTML = str + "Chu vi hình tròn là: " + diameter;
+      // document.write(score_physics);
+  }
+
+</script>
+</html>

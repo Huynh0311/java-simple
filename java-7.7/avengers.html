@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p>Điểm Vật lý</p>
+  <input  type="number" value="physics" id="physics" placeholder="nhập điểm lý">
+  <p>Điểm Hóa học</p>
+  <input  type="number" value="chemistry" id="chemistry" placeholder="nhập điểm hóa">
+  <p>Điểm Sinh học</p>
+  <input  type="number" value="Biology" id="Biology" placeholder="nhập điểm Sinh">
+  <br>
+  <br><button type="button" value="button" onclick="avengers()"> Tính </button>
+    <br>
+</body>
+<script>
+
+    document.write('<br>');
+
+  function avengers(){
+    // let score_physics = +document.getElementById('physics').value;
+
+    let score_physics = document.getElementById('physics').valueAsNumber;
+    let score_chemistry = document.getElementById('chemistry').valueAsNumber;
+    let score_Biology = document.getElementById('Biology').valueAsNumber;
+
+    let avengers = (score_physics + score_chemistry + score_Biology) / 3;
+
+    let str = document.documentElement.innerHTML;
+    document.documentElement.innerHTML = str + "Điểm Trung bình là: " + avengers;
+
+    // document.write("Điểm Trung bình là: " + avengers);
+    // document.write(score_physics);
+  }
+
+</script>
+</html>

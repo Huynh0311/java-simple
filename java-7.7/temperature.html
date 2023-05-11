@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Độ C</p>
+<input  type="number" value="temperature-C" id="temperature-C" placeholder="Nhập độ C">
+<br>
+<br><button type="button" value="button" onclick="temperature()"> Chuyển Độ F  </button>
+<br>
+</body>
+<script>
+
+  document.write('<br/>');
+  function temperature(){
+    // let score_physics = +document.getElementById('physics').value;
+
+    let C = document.getElementById('temperature-C').valueAsNumber;
+
+    let F = C * 1.8 + 32 ;
+    let str = document.documentElement.innerHTML;
+    document.documentElement.innerHTML = str + "Độ F là: " + F;
+    // document.write(score_physics);
+  }
+
+</script>
+</html>
