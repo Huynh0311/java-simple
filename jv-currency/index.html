@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+  <style>
+    td{
+      padding-left: 15px;
+      text-align: center;
+      width: 100px;
+    }
+    select{
+      width: 100px;
+    }
+    button{
+      width: 70px;
+
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <td><label for="amount">Amount</label></td>
+    <td><p>From Currency</p></td>
+    <td><p>To Currency</p></td>
+  </tr>
+  <tr>
+    <td><input  type="number" value="amount" id="amount" placeholder="Nhập số"></td>
+    <td>
+      <select id="FromCurrency">
+        <option value="VND">Việt Nam</option>
+        <option value="USD">USD</option>
+        <option value="YEN">Yên Nhật</option>
+      </select>
+    </td>
+
+    <td>
+      <select id="ToCurrency">
+        <option value="USD">USD</option>
+        <option value="VND">Việt Nam</option>
+        <option value="YEN">Yên Nhật</option>
+      </select>
+    </td>
+    <td>
+      <button type="button" value="button" onclick="BtnCurrency()"> Convert  </button>
+    </td>
+  </tr>
+</table>
+<p id="Result"></p>
+</body>
+<script>
+  function BtnCurrency(){
+  let amount = document.getElementById("amount").value;
+  let fromCurrency = document.getElementById("FromCurrency").value;
+  let toCurrency = document.getElementById("ToCurrency").value;
+
+  let exchange ={
+    USD : 1, //tỉ giá usd
+    VND : 23457.49, // tỉ giá usd sang vnd
+    YEN : 134.56, // tỉ giá usd sang yên
+  };
+  let kq = amount * exchange[toCurrency] / exchange[fromCurrency];
+  document.getElementById('Result').textContent = "Result: " + kq + " " + `${toCurrency}`;
+  }
+</script>
+</html>
