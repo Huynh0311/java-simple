@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let userName = prompt("Bạn là ai?", '');
+  if (userName == 'Huynh') {
+    let pass = prompt('Password?', '');
+    if (pass == 'Huynhdz') {
+      alert('Xin chào!');
+    } else if (pass == null) {
+      alert('Canceled.');
+    } else {
+      alert('Wrong password');
+    }
+  } else if (userName == null) {
+    alert('Canceled');
+  } else {
+    alert("I don't know you");
+  }
+</script>
+</html>
