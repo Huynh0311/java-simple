@@ -14,6 +14,7 @@
   <br>
   <br><button type="button" value="button" onclick="avengers()"> Tính </button>
     <br>
+  <p id="kq"></p>
 </body>
 <script>
 
@@ -29,7 +30,8 @@
     let avengers = (score_physics + score_chemistry + score_Biology) / 3;
 
     let str = document.documentElement.innerHTML;
-    document.documentElement.innerHTML = str + "Điểm Trung bình là: " + avengers;
+    document.getElementById("kq").textContent = " Điểm trung bình là " + avengers;
+    // document.documentElement.innerHTML = str + "Điểm Trung bình là: " + kq;
 
     // document.write("Điểm Trung bình là: " + avengers);
     // document.write(score_physics);
