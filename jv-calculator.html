@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Caculator</title>
+  <style>
+    .btn{
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-$END$
+<form>
+  <div>
+    <input type="number" value="number1" id="number1" placeholder="Nhập số thứ nhất">
+    <input type="number" value="number2" id="number2" placeholder="Nhập số thứ hai"><br/>
+  </div>
+  <div class="btn">
+  <button type="button" onclick="Add()">Cộng</button>
+  <button type="button" onclick="Sub()">Trừ</button>
+  <button type="button" onclick="Multi()">Nhân</button>
+  <button type="button" onclick="Div()">Chia</button>
+  </div>
+  <h3>Kết quả</h3>
+  <div id="result"></div>
+
+</form>
 </body>
+<script>
+
+  let main = document.documentElement.innerHTML;
+  function Add(){
+    let number1 = document.getElementById("number1").valueAsNumber;
+    let number2 = document.getElementById("number2").valueAsNumber;
+    let kq = number1 + number2;
+    // let main = document.documentElement.innerHTML;
+
+    document.getElementById("result").textContent = kq ;
+    // document.documentElement.innerHTML = main + kq ;
+  }
+  function Sub(){
+    let number1 = document.getElementById("number1").valueAsNumber;
+    let number2 = document.getElementById("number2").valueAsNumber;
+    let kq = number1 - number2;
+    document.getElementById("result").textContent = kq ;
+
+  }
+  function Multi(){
+    let number1 = document.getElementById("number1").valueAsNumber;
+    let number2 = document.getElementById("number2").valueAsNumber;
+    let kq = number1 * number2;
+    document.getElementById("result").textContent = kq ;
+  }
+  function Div(){
+    let number1 = document.getElementById("number1").valueAsNumber;
+    let number2 = document.getElementById("number2").valueAsNumber;
+    let kq = number1 / number2;
+    document.getElementById("result").textContent = kq ;
+  }
+</script>
 </html>
