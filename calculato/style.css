@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+    padding: 10px;
+    background-color: pink;
+}
+td input{
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+}
+td button{
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+}
