@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+    <h1> Do you love me?</h1>
+    <button id="bthYes" onclick="yesClick()">Yes</button>
+    <button id="btnNo" onmouseover="noHover()">No</button>
+
 </body>
+<script>
+    let count = 0;
+        function yesClick() {
+        alert(" I love you too <3 ");
+    }
+    function noHover() {
+        let x = Math.round(Math.random() * window.innerWidth)
+        let y = Math.round(Math.random() * window.innerHeight)
+        document.getElementById("btnNo").style.left = x + "px";
+        document.getElementById("btnNo").style.top = y + "px";
+        count++;
+        if (count == 3){
+            alert("Đừng bấm No nữa mà huhuhu")
+        }
+    }
+</script>
 </html>
