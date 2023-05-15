@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .img-styles > img{
+        width: 100%;
+        border: 2px solid #000;
+    }
+    .img-styles {
+      width: 45%;
+    }
+  </style>
 </head>
 <body>
-$END$
+  <div class="img-styles">
+    <img id="img1" onclick="img1_convert()" src="img/funny-cat1_part1x1.jpg" alt="">
+    <img id="img2" onclick="img2_convert()" src="img/funny-cat1_part2x1.jpg" alt="">
+    <img id="img3" onclick="img3_convert()" src="img/funny-cat1_part3x1.jpg" alt="">
+    <img id="img4" onclick="img4_convert()" src="img/funny-cat1_part4x1.jpg" alt="">
+    <img id="img5" onclick="img5_convert()" src="img/funny-cat1_part5x1.jpg" alt="">
+  </div>
 </body>
+<script>
+    // let img1 = document.getElementById('img1');
+    // let img2 = document.getElementById('img2');
+    // let img3 = document.getElementById('img3');
+    // let img4 = document.getElementById('img4');
+    // let img5 = document.getElementById('img5');
+    function img1_convert(){
+      let img1 = document.getElementById('img1');
+      let src = img1.getAttribute('src')
+      if (src === 'img/funny-cat1_part1x1.jpg') {
+        src = 'img/monkey_part1x1.jpg'
+      } else if (src === 'img/monkey_part1x1.jpg') {
+        src = 'img/panda_swap_part1x1.jpg'
+      } else {
+        src = 'img/funny-cat1_part1x1.jpg'
+      }
+      img1.setAttribute('src', src)
+    }
+    function img2_convert(){
+      let img2 = document.getElementById('img2');
+      let src = img2.getAttribute('src')
+      if (src === 'img/funny-cat1_part2x1.jpg') {
+        src = 'img/monkey_part2x1.jpg'
+      } else if (src === 'img/monkey_part2x1.jpg') {
+        src = 'img/panda_swap_part2x1.jpg'
+      } else {
+        src = 'img/funny-cat1_part2x1.jpg'
+      }
+      img2.setAttribute('src', src)
+    }
+    function img3_convert(){
+      let img3 = document.getElementById('img3');
+      let src = img3.getAttribute('src')
+      if (src === 'img/funny-cat1_part3x1.jpg') {
+        src = 'img/monkey_part3x1.jpg'
+      } else if (src === 'img/monkey_part3x1.jpg') {
+        src = 'img/panda_swap_part3x1.jpg'
+      } else {
+        src = 'img/funny-cat1_part3x1.jpg'
+      }
+      img3.setAttribute('src', src)
+    }
+    function img4_convert(){
+      let img4 = document.getElementById('img4');
+      let src = img4.getAttribute('src')
+      if (src === 'img/funny-cat1_part4x1.jpg') {
+        src = 'img/monkey_part4x1.jpg'
+      } else if (src === 'img/monkey_part4x1.jpg') {
+        src = 'img/panda_swap_part4x1.jpg'
+      } else {
+        src = 'img/funny-cat1_part4x1.jpg'
+      }
+      img4.setAttribute('src', src)
+    }
+    function img5_convert(){
+      let img5 = document.getElementById('img5');
+      let src = img5.getAttribute('src')
+      if (src === 'img/funny-cat1_part5x1.jpg') {
+        src = 'img/monkey_part5x1.jpg'
+      } else if (src === 'img/monkey_part5x1.jpg') {
+        src = 'img/panda_swap_part5x1.jpg'
+      } else {
+        src = 'img/funny-cat1_part5x1.jpg'
+      }
+      img5.setAttribute('src', src)
+
+    }
+    // if (img1.getAttribute('src') === 'img/funny-cat1_part1x1.jpg'
+    //    && img2.getAttribute('src') === 'img/funny-cat1_part2x1.jpg'
+    //    && img3.getAttribute('src') === 'img/funny-cat1_part3x1.jpg'
+    //    && img4.getAttribute('src') === 'img/funny-cat1_part4x1.jpg'
+    //    && img5.getAttribute('src') === 'img/funny-cat1_part5x1.jpg'){
+    //
+    //   img1.style.border = "2px solid white";
+    //   img1.style.boxShadow = "2px 2px 7px red";
+    //   img2.style.border = "2px solid white";
+    //   img2.style.boxShadow = "2px 2px 7px red";
+    //   img3.style.border = "2px solid white";
+    //   img3.style.boxShadow = "2px 2px 7px red";
+    //   img4.style.border = "2px solid white";
+    //   img4.style.boxShadow = "2px 2px 7px red";
+    //   img5.style.border = "2px solid white";
+    //   img5.style.boxShadow = "2px 2px 7px red";
+    // } else {
+    //   img1.style.border = "2px solid black";
+    //   img1.style.boxShadow = "2px 2px 7px black";
+    //   img2.style.border = "2px solid black";
+    //   img2.style.boxShadow = "2px 2px 7px black";
+    //   img3.style.border = "2px solid black";
+    //   img3.style.boxShadow = "2px 2px 7px black";
+    //   img4.style.border = "2px solid black";
+    //   img4.style.boxShadow = "2px 2px 7px black";
+    //   img5.style.border = "2px solid black";
+    //   img5.style.boxShadow = "2px 2px 7px black";
+    // }
+</script>
 </html>
