@@ -20,7 +20,8 @@
     function tinh() {
         let height = parseFloat(document.getElementById("height").value)
         let weight = parseFloat(document.getElementById("weight").value)
-        let BMI = weight / ( height ^ 2 );
+        let BMI = weight / Math.pow(height, 2)
+        debugger
         if ( BMI >= 30 ){
             document.getElementById("result").textContent = 'Chỉ số BMI là: ' + BMI + ' .Obese';
         }
@@ -35,28 +36,5 @@
         }
     }
 
-
-
-
-    // let weight = parseInt(prompt("Cân nặng"));
-    // let height = parseInt(prompt("Chiều cao"));
-    // let BMI = weight / ( height ^ 2 )
-    //
-    // if (BMI < 18.5)
-    //
-    // switch (BMI) {
-    //   case BMI < 18.5:
-    //     alert("UnderWeight");
-    //     break;
-    //   case (18.5 <= BMI < 25):
-    //     alert("Normal");
-    //     break;
-    //   case (25 <= BMI < 30):
-    //     alert("OverWeight");
-    //     break;
-    //   case (30 <= BMI):
-    //     alert("Obese");
-    //     break;
-    // }
 </script>
 </html>
