@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>GoodFastCheap</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<label class="checkbox">
+    <div><input type="checkbox" value="" id="good" onclick="GFC('g1')">
+        <span class="slider round"></span> </div>
+</label>
+<p><b>GOOD</b></p>
+
+
+<label class="checkbox">
+    <input type="checkbox" value="" id="cheap" onclick="GFC('f1')">
+    <span class="slider round"></span>
+</label>
+<p><b>CHEAP</b></p>
+
+
+<label class="checkbox">
+    <input type="checkbox" value="" id="fast" onclick="GFC('c1')">
+    <span class="slider round"></span>
+</label>
+<p><b>FAST</b></p>
+
+<script src="GoodFastCheap.js"></script>
 </body>
 </html>
