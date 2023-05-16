@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let doanhso = +prompt("Nhập doanh thu")
+        if (doanhso >= 100000000 && doanhso < 200000000) {
+            let hoahong = doanhso * 5 / 100
+            alert(`Hoa Hồng của ${doanhso} là: ${hoahong} `)
+        } else if (doanhso >= 200000000 && doanhso < 300000000) {
+            let hoahong = doanhso * 7 / 100
+            alert(`Hoa Hồng của ${doanhso} là: ${hoahong} `)
+        } else if (doanhso >= 300000000) {
+            let hoahong = doanhso * 10 / 100
+            alert(`Hoa Hồng của ${doanhso} là: ${hoahong} `)
+        } else{
+            alert("Doanh thu không đủ để có hoa hồng")
+        }
+    </script>
+</html>

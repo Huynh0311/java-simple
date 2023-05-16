@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <h1>Xếp hạng học lực của học sinh</h1>
+    <p>Điểm bài kiểm tra</p>
+    <input type="number" id="dkt">
+
+    <p>Điểm thi giữa kỳ</p>
+    <input type="number" id="dtgk">
+
+    <p>Điểm thi cuối kỳ</p>
+    <input type="number" id="dtck">
+
+    <br><br><Button onclick="check()">Check</Button>
+    <p id="result"></p>
 </body>
+<script>
+    function check() {
+        let dkt = document.getElementById("dkt").valueAsNumber;
+        let dtgk = document.getElementById("dtgk").valueAsNumber;
+        let dtck = document.getElementById("dtck").valueAsNumber;
+
+        avg = (dkt * 10 + dtgk * 30 + dtck * 60) / 100
+      if (avg >= 9 ){
+          document.getElementById("result").textContent = avg + " Học sinh đạt loại giỏi"
+      }else if (avg >= 7 && avg < 9 ){
+          document.getElementById("result").textContent = avg + " Học sinh đạt loại Khá"
+      }else if (avg >= 5 && avg < 7 ){
+          document.getElementById("result").textContent = avg + " Học sinh đạt loại Trung Bình"
+      }else{
+          document.getElementById("result").textContent = avg + " Học sinh đạt loại Yếu"
+      }
+
+    }
+</script>
 </html>
