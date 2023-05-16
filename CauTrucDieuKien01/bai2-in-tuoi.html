@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.-->
+
+
+</body>
+
+<script>
+    let t = prompt("Nhập tuổi")
+    // cách while
+    // while (t > 15) {
+    //     t = prompt("Nhập lại tuổi")
+    //     if(t <= 15){
+    //         alert("Bạn không đủ điều kiện vào lớp 10")
+    //     }
+    // }
+
+
+    // cách for
+    for (let i = 0; i < 100 ; i++) {
+        if (t > 15) {
+            t = prompt("Nhập lại tuổi")
+        } else{
+            alert("Bạn không đủ điều kiện vào lớp 10")
+            break
+        }
+    }
+
+</script>
+</html>
