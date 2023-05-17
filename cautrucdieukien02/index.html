@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // Chuyển độ C sang F
+      let C = +prompt("Nhập độ C");
+      let F = C  *  (9 / 5) + 32
+      alert(` ${C} Độ C bằng ${F} độ F`)
+
+  // Chuyển từ mét sang feet
+      let met = +prompt("Nhập mét");
+      ft = met * 3.2808
+      alert("feet = " + ft)
+
+  // Tính diện tích hình vuông khi biết cạnh a.
+      let a = +prompt("Nhập cạnh a")
+      let dthv = Math.pow(a, 2)
+      alert("Diện tích hình vuông là :" + dt)
+
+  // Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+       let a = +prompt("Nhập chiều dài a")
+       let b = +prompt("Nhập chiều rộng b")
+        dthcn = a * b
+        alert(`Diện tích hình chữ nhật là: ${dthcn}`)
+
+  // Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b
+        let a = prompt("Nhập cạnh a")
+        let b = prompt("Nhập cạnh b")
+        dttgv = 0.5 * (a * b)
+        alert("Diện tích tam giác vuông là: " + dttgv)
+
+  // Giải phương trình bậc 1
+        let a = prompt("Nhập a")
+        let b = prompt("Nhập b")
+        if (a == 0 && b == 0) {
+          alert("Phương trình bậc 1 vô số nghiệm")
+        } else if (a == 0 && b != 0) {
+            alert("Phương trình bậc 1 vô số nghiệm")
+        } else {
+            x = -(b / a)
+            alert("Phương trình có 1 nghiệm: x = " + x)
+        }
+
+  // Giải phương trình bậc 2
+        let a = prompt("Nhập a")
+        let b = prompt("Nhập b")
+        let c = prompt("Nhập c")
+        delta =  Math.pow(b, 2) - 4 * a * c
+
+        if( a == 0)
+          if ( b == 0 && c == 0 ){
+              alert("Phương trình bậc 2 vô số nghiệm")
+            } else if( b ==0 && c != 0){
+                alert("Phương trình bậc 2 vô nghiệm")
+            } else {
+                x = -c / b
+                alert("Phương trình bậc 2 có 1 nghiệm: X = " + x)
+            }
+        else{
+            if (delta > 0){
+                x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                alert("Phương trình có 2 nghiệm phân biệt: X1 = " + x1 + ", X2 =" + x2)
+            } else if (delta == 0){
+                x = -b / (2 * a)
+                C("Phương trình có nghiệm kép X = " +x)
+            }   else{
+                alert("Phương trình vô nghiệm")
+            }
+        }
+
+  // Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+        let tuoi = parseInt(prompt("Nhập tuổi"))
+        if (tuoi >0 && tuoi < 120){
+            alert(tuoi + ": Là tuổi của một người")
+        } else{
+            alert(tuoi + ": Không phải là tuổi của một người")
+        }
+
+  // Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác
+        let a = +prompt("Nhập số thứ nhất")
+        let b = +prompt("Nhập số thứ hai")
+        let c = +prompt("Nhập số thứ ba")
+        if(a > 0 && b > 0 && c > 0 && (a + b) > c && (b + c) > a && (a + c) > b){
+            alert(`${a}, ${b}, ${c} : là ba cạnh của một tam giác`)
+        } else {
+            alert(`${a}, ${b}, ${c} : không là ba cạnh của một tam giác`)
+        }
+
+  // Tính giá điện
+        let sodien= +prompt("Nhập số điện tiêu thụ")
+        if(sodien > 0 && sodien <= 50){
+            giadien = sodien * 1728
+            alert(`Giá tiền điện cho ${sodien} số điện là ${giadien} đồng `)
+        }else if(sodien > 50 && sodien <= 100 ){
+              giadien = (sodien - 50 ) * 1786 + (50* 1728)
+              alert(`Giá tiền điện cho ${sodien} số điện là ${giadien} đồng `)
+        }else if(sodien > 100 && sodien <= 200 ){
+              giadien = (sodien - 100 ) * 2074 + (50 * 1786) + (50 * 1728)
+              alert(`Giá tiền điện cho ${sodien} số điện là ${giadien} đồng `)
+        }else if(sodien > 200 && sodien <= 300 ){
+              giadien = (sodien - 200 ) * 2612 + (100 * 2.074) + (50 * 1786) + (50 * 1728)
+              alert(`Giá tiền điện cho ${sodien} số điện là ${giadien} đồng `)
+        }else if(sodien > 300 && sodien <= 400 ){
+              giadien = (sodien - 300 ) * 2919 + (100 * 2612) + (100 * 2.074) + (50 * 1786) + (50 * 1728)
+              alert(`Giá tiền điện cho ${sodien} số điện là ${giadien} đồng `)
+        }else if( sodien > 400 ){
+              giadien = (sodien - 400 ) * 3015 + (100 * 2919) + (100 * 2612) + (100 * 2.074) + (50 * 1786) + (50 * 1728)
+              alert(`Giá tiền điện cho ${sodien} số điện là ${giadien} đồng `)
+        } else{
+            alert("Nhập sai số điện")
+        }
+
+  // Tính thuế thu nhập cá nhân
+        let luong = +prompt("Nhập lương cá nhân")
+        let thang = +prompt("nhập tháng")
+        if (luong <= 5000000){
+            thue = luong * 5 / 100
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else if (luong > 5000000 && luong <= 10000000){
+            thue = luong * 10 / 100 + 250000
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else if (luong > 10000000 && luong <= 18000000){
+            thue = luong * 15 / 100 + 750000
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else if (luong > 18000000 && luong <= 32000000){
+            thue = luong * 20 / 100 + 1650000
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else if (luong > 32000000 && luong <= 52000000){
+            thue = luong * 25 / 100 + 3250000
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else if (luong > 52000000 && luong <= 80000000){
+            thue = luong * 30 / 100 + 5850000
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else if (luong > 80000000){
+            thue = luong * 35 / 100 + 9850000
+            alert(`Số thuế phải đóng trong tháng ${thang} là: ${thue} đồng`)
+        }else{
+            alert(`Nhập Sai lương`)
+        }
+
+  // Tính lãi ngân hàng
+  //       let tiengui = +prompt("Nhập số tiền gửi")
+  //       let thang = +prompt("Nhập số tháng")
+  //       for ( let i = 0; i <= thang; i++) {
+  //           let nam = nam + 1;
+  //       }
+  //       alert( nam )
+</script>
+</html>
