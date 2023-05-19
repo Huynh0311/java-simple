@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // // chuyển thành "Red,Green,White,Black"
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // document.write(myColor.toString())
+    // document.write(myColor.join('-'))
+
+    // thêm - giữa 2 số chẵn
+    // let num = 12445566
+    // let str = num.toString();
+    // let result = [str[0]];
+    //
+    // for (let i = 1; i < str.length; i++) {
+    //     if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
+    //         result.push("-", str[i]);
+    //     } else {
+    //         result.push(str[i]);
+    //     }
+    // }
+    // document.write(result.join(''));
+
+    // chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa
+    let c = prompt("Nhập vào chữ")
+    let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    result = [];
+    for (let i = 0; i < c.length; i++) {
+        if ( uppercase.indexOf(c[i]) !== -1 ) {
+            result.push(c[i].toLowerCase());
+        }
+        else if ( lowercase.indexOf(c[i]) !== -1 ) {
+            result.push(c[i].toUpperCase())
+        }
+        else {
+            result.push(c[i])
+        }
+    }
+    document.write(result.join(''))
+
+
+
+
+</script>
+</html>
