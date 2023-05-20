@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Cờ caro đơn giản</h1>
+<p id="cocaro"></p>
+<button onclick="change()">Change Value</button>
+</body>
+<script>
+    let c = document.getElementById("cocaro");
+    let board = []
+    let data = ""
+    a = 1
+    for (let i = 0; i < 10; i++) {
+        board[i] = new Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+    }
+    for (let i = 0; i < 10; i++) {
+      data += "<br/>"
+        for (let j = 0; j < 10; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;"
+        }
+    }
+    // data += "<br/><br/><button onClick='change()'>Change Value</button>"
+    c.innerHTML = data
+
+    function change() {
+        let positionX = prompt("nhâp tọa độ X")
+        let positionY = prompt("nhập tọa độ Y")
+        data = ""
+        if (a % 2 == 0){
+            board[positionX][positionY] = "O"
+        } else {
+            board[positionX][positionY] = "X"
+        }
+        a++;
+        for (let i = 0; i < 10; i++){
+            data += "<br/>"
+              for (let j = 0; j < 10; j++){
+                  data = data + board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+              }
+        }
+        c.innerHTML = "<hr/>" + data
+    }
+</script>
+</html>
