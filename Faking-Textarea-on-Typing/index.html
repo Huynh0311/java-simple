@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center">
+    <h1>Faking Textarea on Typing</h1>
+    <textarea id="textarea" style="width: 350px;height: 160px;" onkeydown="typeTextarea()"></textarea>
+</body>
+<script>
+
+    let a = "Tôi là một đứa ngốc!"
+    let n = a.split("")
+    let c = ''
+    function typeTextarea(){
+        let t = document.getElementById("textarea").value
+        let j = t.length;
+        for(var i=0; i<j; i++) {
+            c = c + n[i];
+            if(i == n.length) {
+                document.getElementById("textarea").value = "";
+                c = "";
+            }
+        }
+        document.getElementById("textarea").value = c;
+        c="";
+        setTimeout("typeTextarea()", 1);
+        //return false;
+    }
+</script>
+</html>
