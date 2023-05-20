@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = []
+    n = 10
+
+    for( i = 0; i < n; i++ ){
+        let num = parseInt(prompt("nhập vào số thứ "+ (i+1) + " :"))
+        arr.push( num )
+    }
+    document.write("Mảng nhập vào là: " + arr + "<br/>");
+
+    // Sắp xếp các phần tử trong mảng
+    arr.sort(function (a, b){
+        return b -a
+    });
+
+    document.write("Mảng sau khi sắp xếp:", arr);
+</script>

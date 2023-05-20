@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n = [4, 6, 7, 8, 15, 20, 30, 40, 1, 8]
+   let max = n[0]
+   let t = 0
+   for (let i = 1; i <= n.length; i++) {
+        if (n[i] > max){
+            max = n[i]
+            t = i
+        }
+   }
+   document.write("số lớn nhất là: " + max + " ở vị trí thứ " + t)
+</script>

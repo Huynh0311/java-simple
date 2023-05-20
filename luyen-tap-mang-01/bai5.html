@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = []
+    let count = 0
+    n = prompt("nhập số lượng phần tử của mảng")
+    for( i = 0; i < n; i++ ){
+        let num = parseInt(prompt("nhập vào số thứ "+ (i+1) + " :"))
+        arr.push( num )
+    }
+    document.write("mảng vừa nhập vào là: " + arr+"<br/>")
+    for( j = 0; j < arr.length; j++ ){
+          if( arr[j] < 0 ){
+            count = count + 1
+
+          }
+    }
+    document.write("có " + count + " số nguyên âm có trong chuỗi")
+
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let arr = []
+  n = 10
+
+  for( i = 0; i < n; i++ ){
+    let num = parseInt(prompt("nhập vào số thứ "+ (i+1) + " :"))
+    arr.push( num )
+  }
+  v = parseInt(prompt("nhập số V:"))
+  document.write("Mảng nhập vào là: " + arr + "<br/>");
+
+  if ( arr.includes(v)){
+    arr = arr.filter(function(element) {
+      return element !== v;
+    });
+    arr.push(0);
+    document.write("Mảng sau khi xóa:", arr)
+  }else {
+    document.write("Số V: " + v + " không thuộc mảng trên")
+  }
+</script>
