@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Translate</h1>
+    <input type="text" id="T-english" placeholder="Nhập từ tiếng anh">
+    <button onclick="dichVn()">Dịch</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+  function dichVn() {
+    let english = document.getElementById("T-english").value;
+    let arr_eng = ["apple", "banana", "phone", "pen", "pencil"]
+    let arr_vn = ["Quả táo", "Quả chuối", "Điện thoại", "Bút mực", "Bút chì"]
+    let index_eng = 0
+    let result = ""
+
+    for (let i = 0; i < arr_eng.length; i++){
+        if (english == arr_eng[i]){
+            index_eng = i
+          debugger
+            for (let j = 0; j < arr_vn.length;j++){
+                  if(index_eng == j){
+                    result = arr_vn[j]
+                  }
+            }
+        }
+    }
+    document.getElementById("result").textContent = result;
+  }
+</script>
