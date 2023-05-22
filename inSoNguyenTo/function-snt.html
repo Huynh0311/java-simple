@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let snt = parseInt(prompt("Nhập số nguyên"))
+  check(snt)
+    function check(snt){
+      let checkSnt = true
+      if (snt < 2){
+        checkSnt = false
+      } else {
+        for (let i = 2; i < snt; i++) {
+          if (snt % i === 0) {
+            checkSnt = false
+            break
+          }
+        }
+      }
+      if (checkSnt){
+          alert(snt + " là số nguyên tố")
+        }else {
+          alert(snt + " Không là số nguyên tố")
+        }
+    }
+</script>
