@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+  function minArray(arr) {
+
+      if( arr.length === 0)
+         return "chuỗi rỗng";
+
+      let min = arr[0]
+
+      for (let i = 0; i < arr.length; i++){
+          if(arr[i] < min){
+              min = arr[i]
+          }
+      }
+      return min;
+  }
+
+  let arr1 = [3, 5, 1, 8, -3, 7, 8];
+  let min = minArray(arr1);
+  document.write("Số nhỏ nhất trong chuỗi "+ arr1 + " là: " +min);
+
+  let arr2 = [7, 12, 6, 9, 20, 56, 89]
+  let min2 = minArray(arr2);
+  document.write("<br>Số nhỏ nhất trong chuỗi "+ arr2 + " là: " +min2);
+
+  let arr3 = []
+  let min3 = minArray(arr3);
+  document.write("<br>Số nhỏ nhất trong chuỗi "+ arr3 + " là: " +min3);
+
+  let arr4 = [0, 0, 0, 0, 0, 0]
+  let min4 = minArray(arr4);
+  document.write("<br>Số nhỏ nhất trong chuỗi "+ arr4 + " là: " +min4);
+</script>
