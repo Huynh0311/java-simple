@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function number(a, b){
+      let x = a
+          a = b
+          b = x
+      return [a, b]
+    }
+    let a = parseInt(prompt("Nhập số a"))
+    let b = parseInt(prompt("Nhập số b"))
+    let [a1, b1] = number(a, b)
+    document.write("số a= "+ a1)
+    document.write("<br>số b= "+ b1)
+
+</script>
