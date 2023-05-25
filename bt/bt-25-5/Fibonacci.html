@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = prompt("Nhập số n");
+    let fib = 0
+    let a = 0
+    let b = 1
+    if (n <= 0) {
+        alert("Nhập n phải lớn hơn 0")
+    } else if (n == 1) {
+        alert("Số fibonacci thứ " + n + " là: 0")
+    } else if (n == 2) {
+        alert("Số fibonacci thứ " + n + " là: 1")
+    } else {
+        for (let i = 3; i <= n; i++) {
+            fib = a + b
+            a = b
+            b = fib
+        }
+        alert("Số fibonacci thứ " + n + " là: " + fib)
+    }
+</script>
