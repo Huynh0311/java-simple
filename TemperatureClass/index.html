@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input type="number" id="DoC" placeholder="Nhập độ c">-->
+<!--<input type="button" class="button" onclick="check_F()" value="Chuyển Độ F">-->
+<!--<input type="button" onclick="check_K()" value="Chuyển Độ K">-->
+<p id="Result-C"></p>
+<p id="Result-F"></p>
+</body>
+</html>
+<script>
+    class Temperature {
+        celsius;
+        constructor(celsius){
+            this.celsius =celsius;
+        }
+        fah(){
+            return 9/5 * this.celsius +32
+        }
+        kelvins(){
+            return this.celsius +273.15
+        }
+    }
+
+    let temperature = new Temperature(30);
+    let my_fah = temperature.fah();
+    let my_kelvins = temperature.kelvins();
+
+    document.write("Độ F: " + my_fah)
+    document.write("<br>Độ K: " + my_kelvins)
+</script>
