@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="700" height="100"></canvas>
+</body>
+</html>
+<script>
+
+    class Rectangle {
+        width;
+        height;
+        constructor (width,height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+    }
+    let myRectangle = new Rectangle(300,50);
+    let width = myRectangle.getWidth();
+    let height = myRectangle.getHeight();
+
+    myRectangle.setWidth(300);
+    myRectangle.getWidth();
+
+    document.write("Chiều dài hcn: " + myRectangle.getWidth());
+    document.write("<br>Diện tích hcn là: " + myRectangle.getArea());
+    document.write("<br>chu vi hcn là: " + myRectangle.getPerimeter());
+
+
+    let canvas = document.getElementById("DemoCanvas");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle='#fa4b2a';
+    ctx.fillRect(10, 10, width, height)
+</script>
