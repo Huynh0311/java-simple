@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function checkSum(arr){
+        number_arr = arr.split(" ")
+        let sum = 0
+        for (let i = 0; i < number_arr.length; i++){
+            sum += parseInt(number_arr[i])
+        }
+        return sum
+    }
+    let arr = "1 2 3 4 5 6"
+    sum_arr = checkSum(arr)
+    document.write(`Tổng của chuỗi là: ${sum_arr}`)
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function tim_so_nguyen_to_lon_nhat(danh_sach) {
+        let so_nguyen_to_lon_nhat = null;
+
+        // Hàm kiểm tra số nguyên tố
+        function la_so_nguyen_to(n) {
+            if (n < 2) return false;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+
+        // Duyệt qua từng số trong danh sách
+        danh_sach.forEach(function(so) {
+            if (la_so_nguyen_to(so)) {
+                // Nếu số hiện tại là số nguyên tố và lớn hơn số nguyên tố lớn nhất hiện tại
+                if ( so > so_nguyen_to_lon_nhat) {
+                    so_nguyen_to_lon_nhat = so;
+                }
+            }
+        });
+        return so_nguyen_to_lon_nhat;
+    }
+
+    // Ví dụ sử dụng hàm
+    let danh_sach = [2, 5, 7, 8, 19, 29];
+    let so_nguyen_to_lon_nhat = tim_so_nguyen_to_lon_nhat(danh_sach);
+    document.write("Số nguyên tố lớn nhất là: " + so_nguyen_to_lon_nhat);
+</script>

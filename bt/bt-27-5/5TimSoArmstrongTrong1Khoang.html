@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function checkNumberArmstrong(number) {
+    while (number >= 0) {
+      let total = 0
+      let num_str = number.toString()
+      for (let i = 0; i < num_str.length; i++) {
+        total += num_str[i] ** num_str.length
+      }
+      return total == number
+    }
+  }
+  function tim_so_amstrong_trong_khoang(start, end){
+    let a = ''
+    for (let j = start; j <= end; j++) {
+      if (checkNumberArmstrong(j)) {
+         a += j
+      }
+    }
+    return a
+  }
+  let start = parseInt(prompt("nhập số bắt đầu"))
+  let end = parseInt(prompt("Nhập số kết thúc"))
+  document.write(tim_so_amstrong_trong_khoang(start, end))
+</script>

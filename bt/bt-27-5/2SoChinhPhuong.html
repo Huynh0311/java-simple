@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function tim_so_chinh_phuong(number){
+        for(let i=0;  i < number; i++){
+            // if(Number.isInteger(Math.sqrt(number)) === true) {
+            //   return number
+            // }
+            let sqrt = Math.sqrt(number)
+            if(number % sqrt == 0){
+                return number
+            }
+        }
+    }
+
+    function tim_so_chinh_phuong_gan_nhat(n){
+        let j = n + 1
+        while(true){
+            if(tim_so_chinh_phuong(j) == j){
+                return j
+            }
+            j++
+        }
+    }
+    let n = parseInt(prompt("nhập số n"))
+    document.write(`Số chính phương sau số ${n} là: ${tim_so_chinh_phuong_gan_nhat(n)}`)
+</script>
