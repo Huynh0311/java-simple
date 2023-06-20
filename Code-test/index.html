@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
 </html>
+<script>
+    // let person = {
+    //   name: ['John', 'Son'],
+    //   age: 25,
+    //   gender: 'male',
+    //   interests : ['ball', 'music'],
+    //   bio: function(){
+    //     alert(this.name[0] + ' ' + this.age + ' ' + this.gender + ' ' + this.interests[0] + ' ' + this.interests[1] + '.')
+    //   },
+    //   myName: function (){
+    //       alert(this.name[1] + ' Name person' + '.')
+    //   }
+    // }
+    // person.bio()
+    // person.myName()
+
+    let person = {
+        name: ['John', 'Son'],
+        age: 25,
+        gender: 'male',
+        interests : ['ball', 'music'],
+      getInfo: function(){
+          return this.name[0] + ' ' + this.age + ' ' + this.interests[0]
+      }
+    }
+    person.age = 35
+    alert(person.getInfo())
+</script>

@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
 </html>
+<script>
+    function checkArr(str1, str2) {
+        if (str1.length > str2.length) {
+            return false;
+        }
+        for (let i = 0; i < str2.length; i++) {
+            let j = 0
+            let start = i
+            while (str2[start] === str1[j]) {
+                start++
+                j++
+                if (j === str1.length) {
+                    return true;
+                }
+            }
+        }
+        return false;
+
+    }
+
+    let str1 = "adc"
+    let str2 = "bfadc"
+    let result = checkArr(str1, str2)
+    document.write(result)
+</script>

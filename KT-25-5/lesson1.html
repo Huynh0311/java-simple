@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Tìm điểm lớn thứ 3</title>
 </head>
 <body>
-
 </body>
+<script>
+    function max3(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        for (let n = 0; n < arr.length; n++) {
+            if (n == 2) {
+                alert("Diem cao thu 3 là: " + arr[n]);
+                break;
+            }
+        }
+    }
+
+    let arr = [10, 9, 1, 8, 2];
+    max3(arr);
+
+</script>
 </html>

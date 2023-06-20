@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <p>Nhập số a</p>
+    <input type="number" id="a-input">
+    <p>Nhập số b</p>
+    <input type="number" id="b-input">
+    <p>Nhập số c</p>
+    <input type="number" id="c-input">
+    <br>
+    <br><button onclick="maxClick()">Check max</button>
+    <p id="max-input"></p>
 </body>
+<script>
+    function maxClick() {
+        let a = document.getElementById("a-input").valueAsNumber;
+        let b = document.getElementById("b-input").valueAsNumber;
+        let c = document.getElementById("c-input").valueAsNumber;
+
+        // if (a > b && a > c) {
+        //     document.getElementById("max-input").textContent = "Giá trị max là: " + a;
+        // } else if (b > a && b > c) {
+        //     document.getElementById("max-input").textContent = "Giá trị max là: " + b;
+        // } else {
+        //     document.getElementById("max-input").textContent = "Giá trị max là: " + c;
+        // }
+
+        let kq = Math.max(a, b, c);
+        document.getElementById("max-input").textContent = "Giá trị max là: " + kq;
+    }
+
+
+</script>
 </html>

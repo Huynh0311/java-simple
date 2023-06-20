@@ -9,5 +9,30 @@
 </body>
 </html>
 <script>
+    function sap_xep_theo_tu_dien(arr) {
 
+        for (let i = 0; i < arr.length - 1; i++) {
+            let minIndex = i;
+
+            for (let j = i + 1; j < arr.length; j++) {
+                if (danh_sach[j] < danh_sach[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            if (minIndex !== i) {
+                let temp = danh_sach[i];
+                danh_sach[i] = danh_sach[minIndex];
+                danh_sach[minIndex] = temp;
+            }
+        }
+
+        return danh_sach;
+    }
+
+    // Ví dụ sử dụng
+    let arr = ["ghi", "def", "abc", "jkl", "mno"];
+    let arrange = sap_xep_theo_tu_dien(arr);
+
+    console.log(arrange);
 </script>

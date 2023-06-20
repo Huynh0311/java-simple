@@ -2,9 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
+  <style>
+    button {
+      background-color: lightgreen;
+    }
+  </style>
 </head>
 <body>
-$END$
+<h3>Add products</h3>
+<div>
+  <input type="text" placeholder="New Product" id="name">
+  <button onclick="add()">Add</button>
+</div>
+<br>
+
+<!--form edit-->
+<div id="form-edit">
+</div>
+
+<!--show-->
+<h3>All products</h3>
+<table>
+  <tr>
+    <td >Products</td>
+    <td><p id="quantity"></p></td>
+  </tr>
+  <tbody id="list">
+
+  </tbody>
+</table>
+
+<script>
+  let listProducts = [];
+
+  function add() {
+    let name = document.getElementById('name').value;
+    listProducts.push(name);
+    display();
+  }
+
+  function display() {
+    let html = '';
+    for (let i = 0; i < listProducts.length; ++i) {
+      html += `
+        <tr>
+            <td>${listProducts[i]}</td>
+            <td><button onclick="showFormEdit(${i})">Edit</button></td>
+            <td><button onclick="deleteProduct(${i})">Delete</button></td>
+        </tr>
+      `;
+    }
+
+    document.getElementById('list').innerHTML = html;
+    document.getElementById('quantity').innerHTML = listProducts.length;
+    document.getElementById('name').value = '';
+  }
+
+  function deleteProduct(index) {
+    listProducts.splice(index, 1);
+    display();
+  }
+
+  function showFormEdit(index) {
+    document.getElementById('form-edit').innerHTML = `
+      <h3>Form edit</h3>
+      <input type="text" placeholder="Edit product" id="name-edit">
+      <button onclick="edit(${index})">Save</button>
+    `;
+    let name = listProducts[index];
+    document.getElementById('name-edit').value = name;
+  }
+
+  function edit(index) {
+    let nameEdit = document.getElementById('name-edit').value;
+    listProducts[index] = nameEdit;
+    document.getElementById('form-edit').innerHTML = ``;
+    display();
+  }
+</script>
 </body>
 </html>

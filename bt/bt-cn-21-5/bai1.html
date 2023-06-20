@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--1. myStr = "You guys try to do the exercises because doing more exercises helps us understand the theory and solve problems better"-->
+<!-- - Viết chương trình đếm số từ trong chuỗi trên.-->
+<!-- - Viết chương trình tìm từ dài nhất và số chữ cái trong từ đó.-->
+<!-- - Viết chương trình đếm số từ xuất hiện nhiều nhất trong chuỗi trên.-->
+<!-- - Viết chương trình đếm số chữ cái xuất hiện nhiều nhất trong chuỗi trên.-->
+
+</body>
+</html>
+<script>
+    let myStr = "You guys try to do the exercises because doing more exercises helps us understand the theory and solve problems better"
+    let maxLength = 0
+    let textmaxLength = ""
+
+// đếm từ trong chuỗi
+    c = myStr.split(" ")
+    count = c.length
+    document.write("Số từ trong chuỗi trên là: " + count + "<br/>")
+
+// Đếm từ dài nhất trong chuỗi và số chữ cái trong từ đó.
+      for (let i = 0; i < count; i++){
+          let wordLength = c[i].length
+            if( wordLength > maxLength ){
+                maxLength = c[i].length
+              textmaxLength = c[i]
+            }
+      }
+      document.write('Từ dài nhất trong chuỗi là: ' + textmaxLength)
+      document.write('. Và có: ' + maxLength + ' chữ cái')
+
+// đếm số từ xuất hiện nhiều nhất trong chuỗi trên
+    // Tạo một đối tượng đếm số lần xuất hiện của từ
+    let wordCount = [];
+    for (let i = 0; i < c.length; i++) {
+      let word = c[i];
+
+      if (wordCount[word] === wordCount[word]) {
+        wordCount[word]++;
+      } else {
+        wordCount[word] = 1;
+      }
+
+    }
+
+    // Tìm từ xuất hiện nhiều nhất
+    let maxCount = 0;
+    let mostWord = "";
+    let mostResult = [];
+    for (let word in wordCount) {
+      if (wordCount[word] >= maxCount) {
+        maxCount = wordCount[word];
+        mostWord = word;
+        mostResult.push(mostWord);
+      }
+    }
+
+    document.write("<br>Từ xuất hiện nhiều nhất là: " + mostResult);
+
+// đếm số chữ cái xuất hiện nhiều nhất trong chuỗi trên
+
+    // Chuyển đổi chuỗi thành chữ thường để không phân biệt chữ hoa, chữ thường
+    let Str = myStr.toLowerCase();
+
+    // Tạo một đối tượng đếm số lần xuất hiện của chữ cái
+    let charCount = {};
+    for (let i = 0; i < Str.length; i++) {
+      let char = Str[i];
+
+      if (char.match(/[a-z]/)) {
+        if (charCount[char] === undefined) {
+          charCount[char] = 1;
+        } else {
+          charCount[char]++;
+        }
+      }
+    }
+
+    // Tìm chữ cái xuất hiện nhiều nhất
+    let maxCCCount = 0;
+    let mostChar = "";
+    for (let char in charCount) {
+      if (charCount[char] > maxCCCount) {
+        maxCCCount = charCount[char];
+        mostChar = char;
+      }
+    }
+
+    document.write("<br> Chữ cái xuất hiện nhiều nhất là: " + mostChar);
+
+</script>

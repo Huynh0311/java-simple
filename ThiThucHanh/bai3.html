@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+
+        function isPrime(number) {
+            let x = number;
+            if (x < 2) {
+                return false;
+            }
+            for (let i = 2; i <= (x - 1); i++) {
+                if (x % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    function sumOfListPrime(x) {
+        let sum = 0;
+        for (let number = 0; number <= x; number++) {
+            if (isPrime(number)) {
+                sum += number
+            }
+        }
+
+        return sum;
+    }
+
+    let x = parseInt(prompt("Nhập số x"))
+    document.write(sumOfListPrime(x));
+</script>

@@ -16,7 +16,7 @@
     function typeTextarea(){
         let t = document.getElementById("textarea").value
         let j = t.length;
-        for(var i=0; i<j; i++) {
+        for(let i=0; i<j; i++) {
             c = c + n[i];
             if(i == n.length) {
                 document.getElementById("textarea").value = "";
@@ -26,7 +26,6 @@
         document.getElementById("textarea").value = c;
         c="";
         setTimeout("typeTextarea()", 1);
-        //return false;
     }
 </script>
 </html>

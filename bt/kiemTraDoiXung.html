@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Chuoi(arr){
+      for(let i=0; i < arr.length / 2; i++) {
+          if (arr[i] !== arr[arr.length - 1 - i]){  // arr[0] !== arr[5 - 1 - 0]
+            return false
+          }
+        }
+      return true
+    }
+    let arr2 = "12311"
+    let result = Chuoi(arr2)
+    console.log(result)
+
+</script>

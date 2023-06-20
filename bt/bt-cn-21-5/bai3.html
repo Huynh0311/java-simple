@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--3. Yêu cầu người dùng nhập họ tên vào ô input, sau đó đọc và in ra họ tên người đó đúng chính tả.-->
+<!--VD nhập vào: "  nGUyeN   vAn     dAT " => chỉnh sửa và in ra: "Nguyen Van Dat"-->
+<h1>Nhập họ và tên</h1>
+<input type="text" id="inputName" style="width: 250px; height: 25px; " >
+<input type="button" onclick="check()" value="Check">
+<p id="result"></p>
+<script>
+    // cách 1
+ function check(){
+     let input = document.getElementById("inputName").value;
+     let checkName = input.trim().toLowerCase().split(" ");
+
+     const valueToRemove = "";
+     const new_checkName = checkName.filter(item => item !== valueToRemove);
+
+     const checkName2 = new_checkName.map(word => word[0].toUpperCase() + word.substring(1));
+     new_checkName2 = checkName2.join(" ");
+     document.getElementById("result").textContent = new_checkName2;
+}
+
+
+    // cách 2
+    function check2(){
+    let input = document.getElementById("inputName").value;
+    let checkName = input.trim().replace(/\s+/g, ' ').toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+    // 1.`trim()`: Loại bỏ khoảng trắng ở đầu và cuối chuỗi.
+    // 2.`.replace(/\s+/g, ' ')`: Thay thế một chuỗi gồm nhiều khoảng trắng liên tiếp bằng một khoảng trắng duy nhất.
+    // 3.`.toLowerCase()`: Chuyển tất cả các ký tự thành chữ thường.
+    // 4.`.replace(/\\b\\w/g, c => c.toUpperCase())`: Chuyển đổi ký tự đầu của mỗi từ thành chữ hoa.
+    document.getElementById("result").textContent = checkName;
+    }
+</script>
+</body>
+</html>

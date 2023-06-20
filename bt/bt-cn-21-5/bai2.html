@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--2. myArr = [1, 2, 2, 7, 8, 8, 8]-->
+<!-- - Viết CT tìm phần tử xuất hiện nhiều nhất và số lần xuất hiện của phần tử đó => 8: 3-->
+<!-- - Viết CT loại bỏ các phần tử trùng lặp trong mảng => [1, 2, 7, 8]-->
+
+</body>
+</html>
+<script>
+    const myArray = [1, 2, 1, 2, 3, 4, 5, 6, 6];
+    const countedValues = myArray.reduce((acc, value) => {
+        acc[value] = (acc[value] || 0) + 1;
+        return acc;
+    }, {});
+
+    console.log(countedValues);
+  let myArr1 = [1, 2, 2, 7, 8, 8, 8];
+// tìm phần tử xuất hiện nhiều nhất và số lần xuất hiện của phần tử đó
+  // Tạo một đối tượng đếm số lần xuất hiện của phần tử
+      let elementCount = {};
+      for (let i = 0; i < myArr1.length; i++) {
+        let element = myArr1[i];
+
+        if (elementCount[element] === undefined) {
+          elementCount[element] = 1;
+        } else {
+          elementCount[element] += 1;
+        }
+      }
+        console.log( elementCount)
+      // Tìm phần tử xuất hiện nhiều nhất và số lần xuất hiện của nó
+      let maxCount = 0;
+      let mostElement = null;
+      for (let element in elementCount ) {
+          // for ( let i = 0; i < elementCount.length; i++) {
+          //     element = elementCount[i];
+
+        if (elementCount[element] > maxCount) {
+          maxCount = elementCount[element];
+          mostElement = element;
+        }
+      }
+
+      document.write("Phần tử xuất hiện nhiều nhất là: " + mostElement);
+      document.write("<br>Số lần xuất hiện của phần tử đó là: " + maxCount);
+
+    //
+    // loại bỏ các phần tử trùng lặp trong mảng
+
+    let elementCount3 = [];
+    for (let i = 0; i < myArr1.length; i++) {
+        let element = myArr1[i];
+
+        if (!elementCount3.includes(element)) {
+            elementCount3.push(element)
+        }
+    }
+    document.write("<br>Mảng sau khi loại bỏ phần tử trùng nhau là: " + elementCount3)
+</script>

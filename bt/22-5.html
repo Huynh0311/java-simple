@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let myArr1 = ["Táo", "Lê", "Mít", "Táo", "Xoài"];
+
+  let elementCount3 = [];
+  for (let i = 0; i < myArr1.length; i++) {
+      let element = myArr1[i];
+
+      if (!elementCount3.includes(element)) {
+          elementCount3.push(element)
+      }
+  }
+  document.write("<br>Mảng sau khi loại bỏ phần tử trùng nhau là: " + elementCount3)
+
+  // tìm phần tử xuất hiện nhiều nhất và số lần xuất hiện của phần tử đó
+  // Tạo một đối tượng đếm số lần xuất hiện của phần tử
+  function count(myArr1){
+  let fruitCount = {};
+  for (let i = 0; i < myArr1.length; i++) {
+    let element = myArr1[i];
+
+    if (fruitCount[element] === undefined) {
+      fruitCount[element] = 1;
+    } else {
+      fruitCount[element] += 1;
+    }
+  }
+  return fruitCount
+  }
+  let result = count(myArr1);
+  console.log(result)
+  let valuesArray = Object.values(result) // lấy ra values của keys-value fruitCount [2,1,1,1]
+  document.write("<br>" + valuesArray)
+
+  var chuoi = [3, 5, 7, 6, 4, 6, 8, 0, 7, 4];
+  var len = chuoi.length;
+
+  for (var i = 0; i < len - 1; i++) {
+      for (var j = 0; j < len - i - 1; j++) {
+          if (chuoi[j] < chuoi[j + 1]) {
+              var temp = chuoi[j];
+              chuoi[j] = chuoi[j + 1];
+              chuoi[j + 1] = temp;
+          }
+      }
+  }
+
+  console.log(chuoi);
+</script>

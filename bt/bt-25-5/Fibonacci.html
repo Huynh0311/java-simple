@@ -9,22 +9,26 @@
 </body>
 </html>
 <script>
-    let n = prompt("Nhập số n");
-    let fib = 0
-    let a = 0
-    let b = 1
-    if (n <= 0) {
-        alert("Nhập n phải lớn hơn 0")
-    } else if (n == 1) {
-        alert("Số fibonacci thứ " + n + " là: 0")
-    } else if (n == 2) {
-        alert("Số fibonacci thứ " + n + " là: 1")
-    } else {
-        for (let i = 3; i <= n; i++) {
-            fib = a + b
-            a = b
-            b = fib
+    function checkNumberFib(n) {
+        let fib = 0
+        let a = 0
+        let b = 1
+        if (n <= 0) {
+            return alert("Nhập n phải lớn hơn 0")
+        } else if (n == 1) {
+            return alert("Số fibonacci thứ " + n + " là: 0")
+        } else if (n == 2) {
+            return alert("Số fibonacci thứ " + n + " là: 1")
+        } else {
+            for (let i = 3; i <= n; i++) {
+                fib = a + b
+                a = b
+                b = fib
+            }
+            return fib
         }
-        alert("Số fibonacci thứ " + n + " là: " + fib)
     }
+
+    let n = prompt("Nhập số n");
+    alert("Số fibonacci thứ " + n + " là: " + checkNumberFib(n))
 </script>

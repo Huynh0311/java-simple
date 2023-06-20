@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function perfectNumbers(number){
+        let sum = 0
+        for (let i = 0; i < number; i++){
+            if(number % i == 0){
+                sum += i
+            }
+        }
+        if(sum === number){
+            alert("số " + number + " là số hoàn hảo")
+        }else {
+            alert("số " + number + " không là số hoàn hảo")
+        }
+        return alert
+    }
+    let number = parseInt(prompt("nhập số cần check"))
+    perfectNumbers(number)
+</script>

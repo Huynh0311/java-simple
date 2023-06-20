@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+</script>
+<script>
+    function insertNumberToArray(arr, x, index) {
+        if (index > arr.length || index < 0) {
+            return arr;
+        } else {
+            let arrNew = new Array(arr.length + 1);
+            for (let j = 0; j <= arr.length; j++) {
+                if (index > j) {
+                    arrNew[j] = arr[j]
+                } else if (index == j) {
+                    arrNew[j] = x;
+                } else {
+                    arrNew[j] = arr[j - 1]
+                }
+            }
+            return arrNew;
+        }
+    }
+
+    let arr = [1, 2, 3, 4, 5]
+    let x = parseInt(prompt("Nhập số muốn thêm"));
+    let loc = parseInt(prompt("Nhập vị trí cần thêm"));
+    document.write(insertNumberToArray(arr, x, loc));
+</script>

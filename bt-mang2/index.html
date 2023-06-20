@@ -33,10 +33,10 @@
     let lowercase = 'abcdefghijklmnopqrstuvwxyz'
     result = [];
     for (let i = 0; i < c.length; i++) {
-        if ( uppercase.indexOf(c[i]) !== -1 ) {
+        if ( uppercase.includes(c[i]) === true ) {
             result.push(c[i].toLowerCase());
         }
-        else if ( lowercase.indexOf(c[i]) !== -1 ) {
+        else if ( lowercase.includes(c[i]) === true ) {
             result.push(c[i].toUpperCase())
         }
         else {

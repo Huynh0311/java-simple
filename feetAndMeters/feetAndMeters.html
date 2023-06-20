@@ -11,17 +11,17 @@
 
 <input type="number" id = "inputFoot" onchange="convertMeter(value)" oninput="convertMeter(value)" placeholder="Nhập meter">
 <!--<br><input type="button" onclick="converFeet" value="check feet" style="margin-top: 5px">-->
-<p id="resultFeet"></p>
+<p id="resultMeter"></p>
 </body>
 </html>
 <script>
     function convertFoot(value) {
-      value = parseFloat(value)
-      document.getElementById("resultFoot").innerHTML = "Foot = " + (value * 0.305) + " meter"
+        value = parseFloat(value)
+        document.getElementById("resultFoot").innerHTML = "Foot = " + (value * 0.305) + " meter"
     }
 
     function convertMeter(value) {
-      value = parseFloat(value)
-      document.getElementById("resultFeet").innerHTML = "Meter = " + (value * 3.279) + " foot"
+        value = parseFloat(value)
+        document.getElementById("resultMeter").innerHTML = "Meter = " + (value * 3.279) + " foot"
     }
 </script>

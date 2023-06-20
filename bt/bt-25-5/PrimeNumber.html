@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // Hàm tìm số nguyên tố
+    function isPrime(number) {
+        let x = number;
+        if (x < 2) {
+            return false;
+        }
+        for (let i = 2; i <= (x - 1); i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Hàm tìm số nguyên tố thứ n
+    function findPrime(n) {
+        let count = 0;
+        let number = 2;
+        // Duyệt từ 2 trở đi do <2 ko là số nguyên tố
+
+        while (count < n) {
+            if (isPrime(number)) {
+                count++;
+            }
+            if (count === n) {
+                return number;
+            }
+            number++;
+        }
+    }
+
+    let n = parseInt(prompt("Nhập số nguyên dương n:"));
+    let result = findPrime(n);
+    alert(`Số nguyên tố thứ ${n} là: ${result}`);
+</script>

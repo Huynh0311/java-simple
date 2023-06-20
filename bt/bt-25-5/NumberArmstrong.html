@@ -9,16 +9,20 @@
 </body>
 </html>
 <script>
-        let num = 0
-        while (num < 1000) {
+    function checkNumberArmstrong(number) {
+        while (number >= 0) {
             let total = 0
-            let num_str = num.toString()
+            let num_str = number.toString()
             for (let i = 0; i < num_str.length; i++) {
-                total += Math.pow(num_str[i], num_str.length)
+                total += num_str[i] ** num_str.length
             }
-            if (total == num) {
-                console.log(num)
-            }
-            num += 1
+            return total == number
         }
+    }
+
+    for (let i = 0; i < 1000; i++) {
+        if (checkNumberArmstrong(i)) {
+            console.log(i)
+        }
+    }
 </script>

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <p>Nhập số</p>
+    <input type="number" id="input">
+    <button onclick="nhan()">x2</button>
+    <button onclick="chia()">/2</button>
 </body>
+    <script>
+        function nhan() {
+            let a = document.getElementById("input").valueAsNumber;
+
+            let kq = a * 2;
+            document.getElementById("input").value = kq;
+        }
+        function chia() {
+            let a = document.getElementById("input").valueAsNumber;
+
+            let kq = a / 2;
+            document.getElementById("input").value = kq;
+        }
+    </script>
 </html>

@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>tryRemoveFromArray</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+  function tryRemoveFromArray(arr, index) {
+    if (index >= 0 && index < arr.length) {
+      let result = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (i !== index) {
+          result[result.length] = arr[i];
+        }
+      }
+      return result;
+    } else {
+      return arr;
+    }
+  }
+
+  let arr = [4, 6, 3, 2, 7, 4];
+  let index = 1;
+  let result = tryRemoveFromArray(arr, index);
+  document.write(result);
+
+
+
+</script>
 </html>
